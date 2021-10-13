@@ -28,7 +28,7 @@ class UserController {
             }
 
             const user = await getDatabase().collection('users').insertOne(data)
-            res.status(200).json({success:true, message:"success register new account", data:user})
+            res.status(200).json({success:true, message:"success register.."})
         }catch(err){
             next(err)
         }
@@ -47,7 +47,7 @@ class UserController {
             const user = await getDatabase().collection('users').findOne({ email })
             if(user && bcrypt.compareSync(password, user.password)){
                 const token = jwt.sign({id:user._id, name:user.name}, process.env.JWT_SECREAT)
-                res.status(200).json({success:true, message:'success login', token})
+                res.status(200).json({success:true, message:'success login..', token})
             }else{
                 throw { name: "LOGIN_FAIL"}
             }            

@@ -25,7 +25,8 @@ After clone repository<br/>
 open viscode or another text editor and then open terminal<br/>
 enter to folder selection-pasarnow type <i>"cd selection-pasarnow"</i><br/>
 install all dependecies type <i>"npm i"</i><br/>
-next you can run the server, type <i>"npm run dev"</i>(make sure you already install mongoDB into your PC or laptop)<br/>
+next you can run the server, type <i>"npm run dev"</i><br/>
+<b>(make sure you already install mongoDB into your PC or laptop)</b><br/>
 
 
 ## REGISTER USER
@@ -147,6 +148,10 @@ GET
 ```params
 None
 ```
+* Headers:
+```headers
+token
+```
 * Data Body
 ```data
 None
@@ -197,6 +202,10 @@ POST
 * URL Params
 ```params
 None
+```
+* Headers:
+```headers
+token
 ```
 * Data Body
     Required:
@@ -250,6 +259,10 @@ PUT
 ```params
 :id
 ```
+* Headers:
+```headers
+token
+```
 * Data Body
     ```data
     Required: 
@@ -297,10 +310,14 @@ PATCH
 ```params
 :id
 ```
+* Headers:
+```headers
+token
+```
 * Data Body
-    ```data
-    none
-    ```
+```data
+None
+```
 * Success Response:
     Code: 200
     ```res
@@ -339,6 +356,10 @@ DELETE
 * URL Params
 ```params
 :id
+```
+* Headers:
+```headers
+token
 ```
 * Data body
 ```data
